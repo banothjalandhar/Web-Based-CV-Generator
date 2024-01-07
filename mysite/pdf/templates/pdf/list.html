@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Title of the HTML document -->
+    <title>CV Database Profile List</title>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header row -->
+        <div class="row m-5">
+            <div class="col-md-12">
+                <h2>CV Database Profile List</h2>
+            </div>
+        </div>
+
+        <!-- Loop through each profile and display information -->
+        {% for profile in profiles %}
+        <div class="row">
+            <!-- Display profile name -->
+            <div class="col-md-6">
+                {{profile.name}}
+            </div>
+
+            <!-- Display a button to download CV linked to the specific profile -->
+            <div class="col-md-6">
+                <a href="/{{profile.id}}" class="btn btn-warning">Download CV</a>
+            </div>
+        </div>
+
+        <!-- Horizontal line to separate each profile -->
+        <hr>
+
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Title of the HTML document -->
+    <title>User Profile</title>
+</head>
+<body>
+    <!-- Display user's name -->
+    <h2>{{user_profile.name}}</h2>
+
+    <!-- Display user's email -->
+    <h2>{{user_profile.email}}</h2>
+
+    <!-- Display user's phone number -->
+    <h2>{{user_profile.phone}}</h2>
+
+    <!-- Horizontal line and line break for separation -->
+    <hr/>
+    <br/>
+
+    <!-- Section for displaying user's summary -->
+    <p>Summary</p>
+    <p>{{user_profile.summary}}</p>
+
+    <!-- Horizontal line for separation -->
+    <hr/>
+
+    <!-- Section for displaying user's skills -->
+    <p>Skills</p>
+    <p>{{user_profile.skills}}</p>
+
+    <!-- Horizontal line for separation -->
+    <hr/>
+
+    <!-- Section for displaying user's education -->
+    <p>Education</p>
+    <ul>
+        <!-- Display user's schooling -->
+        <li>Schooling: {{user_profile.school}}</li>
+
+        <!-- Display user's degree and university -->
+        <li>{{user_profile.degree}} from {{user_profile.university}}</li>
+    </ul>
+
+    <!-- Horizontal line for separation -->
+    <hr/>
+
+    <!-- Section for displaying user's previous work -->
+    <p>Previous Work</p>
+    <p>{{user_profile.previous_work}}</p>
+</body>
+</html>
